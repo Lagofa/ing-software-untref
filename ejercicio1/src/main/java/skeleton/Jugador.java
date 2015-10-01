@@ -2,23 +2,30 @@ package skeleton;
 
 public class Jugador {
 	
+	private Opcion opcionElegida;
 	private int numeroDeJugador;
 	
-	public String juegaPiedra() {
+    public Jugador(int numeroDeJugador){
 		
-		return "PIEDRA";	
+    	this.numeroDeJugador = numeroDeJugador;
+	
+	}
+    
+	public void juegaPiedra() {
+	
+		this.opcionElegida =  Opcion.PIEDRA;	
 	
 	}
 
-	public String juegaTijera() { 
-		
-		return "TIJERA";
+	public void juegaTijera() {
+	
+		this.opcionElegida = Opcion.TIJERA;
 	
 	}
 	
-	public String juegaPapel() {
-		
-		return "PAPEL";
+	public void juegaPapel() {
+	
+		this.opcionElegida = Opcion.PAPEL;
 	
 	}
 
@@ -27,12 +34,10 @@ public class Jugador {
 		return this.numeroDeJugador;
 	
 	}
-	
-	public setNumeroJugador(int numeroDeJugador) {
+    
+	public Opcion getOpcionElegida (){
 		
-		this.numeroDeJugador = numeroDeJugador;
+		return this.opcionElegida;	
 	
 	}
-
-	
 }

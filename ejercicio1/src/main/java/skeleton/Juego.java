@@ -4,67 +4,64 @@ public class Juego {
 
 	private Jugador jugador1;
 	private Jugador jugador2;
+	
+	
+	public Juego(Jugador jugador1, Jugador jugador2) {
+		this.jugador1 = jugador1;
+		this.jugador2 = jugador2;
+	}
 
-	public String definirGanador(String SeleccionA, String seleccionB) {
+	public String jugar() {
 		
-		String resultado ;
-		swwitch(seleccionA){
-			case "PIEDRA":
-				resultado = compararConPiedra(seleccionB);
-				break;
-			case "PAPEL":
-				resultado = compararConPapel(seleccionB);
-				break;
-			case "TIJERA":
-				resultado = compararConTijera(seleccionB);
-				break;
-		}
+		String resultado = null; 
+		switch(this.jugador1.getOpcionElegida()){
+        	case PIEDRA:
+        		resultado = this.compararConPiedra();
+        	break;
+        	case PAPEL:
+        		resultado = this.compararConPapel();
+			break;
+        	case TIJERA:
+        		resultado = this.compararConTijera();
+			break;
+        	default:
+			break;
+        	
+        }
+
 		return resultado;
 	}
 	
-	private string compararConPiedra(String seleccion){
+	private String compararConPiedra(){
 		
-		String resultado="empate";
+		String resultado = "empate";
+		if(this.jugador2.getOpcionElegida()==Opcion.PAPEL)
+			resultado = "gana jugador" + this.jugador2.getNumeroDeJugador();
+		else if(this.jugador2.getOpcionElegida()==Opcion.TIJERA)
+			resultado = "gana jugador" + this.jugador1.getNumeroDeJugador();
+		return resultado;
 		
-		if(seleccion.compareTo("TIJERA")==0)
-			resultado = "gana jugador" + this.jugador1.getNumero();
-			else
-				if(seleccion.compareTo("PAPEL")==0)
-		     		resultado = "gana jugador" + this.jugador2.getNumero();
-	    return resultado;
-	
 	}
 	
-    private string compararConPapel(String seleccion){
+    private String compararConPapel(){
 		
-		String resultado="empate";
+		String resultado = "empate";
+		if(this.jugador2.getOpcionElegida()==Opcion.PIEDRA)
+			resultado = "gana jugador" + this.jugador1.getNumeroDeJugador();
+		else if(this.jugador2.getOpcionElegida()==Opcion.TIJERA)
+			resultado = "gana jugador" + this.jugador2.getNumeroDeJugador();
+		return resultado;
 		
-		if(seleccion.compareTo("PIEDRA")==0)
-			resultado = "gana jugador" + this.jugador1.getNumero();
-			else
-				if(seleccion.compareTo("TIJERA")==0)
-		     		resultado = "gana jugador" + this.jugador2.getNumero();
-	    return resultado;
-	 
-    }
-	
-    private string compararConTijera(String seleccion){
-		
-		String resultado="empate";
-		
-		if(seleccion.compareTo("PAPEL")==0)
-			resultado = "gana jugador" + this.jugador1.getNumero();
-			else
-				if(seleccion.compareTo("PIEDRA")==0)
-		     		resultado = "gana jugador" + this.jugador2.getNumero();
-	    return resultado;
-	
-     }
+	}
     
-    public SetJugadores(Jugador jugador1, Jugador jugador2) {
-	
-    	this.jugador1 = jugador1;
-		this.jugador2 = jugador2;
-	
-    }
+ private String compararConTijera(){
+		
+		String resultado = "empate";
+		if(this.jugador2.getOpcionElegida()==Opcion.PIEDRA)
+			resultado = "gana jugador" + this.jugador2.getNumeroDeJugador();
+		else if(this.jugador2.getOpcionElegida()==Opcion.PAPEL)
+			resultado = "gana jugador" + this.jugador1.getNumeroDeJugador();
+		return resultado;
+		
+	}
 }
