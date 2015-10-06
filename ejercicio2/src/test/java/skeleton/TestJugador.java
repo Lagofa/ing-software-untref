@@ -2,7 +2,6 @@ package skeleton;
 
 
 import skeleton.Jugador;
-
 import org.junit.Assert;
 import org.junit.Test;
 
