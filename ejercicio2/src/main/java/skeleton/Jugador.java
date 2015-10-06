@@ -13,8 +13,7 @@ public class Jugador {
 	}
 
 	public void decrementarVida() {
-		this.vidas--;
-		
+		this.vidas--;		
 	}
 
 }
