@@ -49,5 +49,9 @@ public class Palabra {
 			}
 		}	
 	}
+	
+	public void setEstadoPalabra(String estado){
+		this.estadoPalabra = estado.toCharArray();
+	}
 
 }

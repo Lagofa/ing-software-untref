@@ -6,8 +6,9 @@ public class Ahorcado {
 	private Palabra palabra;
 	
 	public Ahorcado(String palabra){
-		this.jugador = new Jugador(7);
+		this.jugador = new Jugador();
 		this.palabra = new Palabra(palabra);
+		this.jugador.setVidas(7);
 	}
 
 	public char[] getPalabra(){
@@ -28,6 +29,14 @@ public class Ahorcado {
 		}else{
 			this.palabra.completarEstadoConLetra(letra);
 		}
+	}
+	
+	public void SetVidasJugador(int vidas){
+		this.jugador.setVidas(vidas);
+	}
+	
+	public void setEstadoPalabra(String estadoPalabra){
+		this.palabra.setEstadoPalabra(estadoPalabra);
 	}
 	
 }
