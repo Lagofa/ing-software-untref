@@ -1,6 +1,5 @@
 package skeleton;
 
-
 import skeleton.Jugador;
 import org.junit.Assert;
 import org.junit.Test;
@@ -22,7 +21,6 @@ public class TestJugador {
 		jugador.decrementarVida();
 		vidas= jugador.getVidas();
 		Assert.assertEquals(vidas,6);
-	}
-	
+	}	
 
 }

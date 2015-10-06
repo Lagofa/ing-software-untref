@@ -15,4 +15,5 @@ public class Jugador {
 	public void setVidas(int vidas){
 		this.vidas = vidas;
 	}
+	
 }

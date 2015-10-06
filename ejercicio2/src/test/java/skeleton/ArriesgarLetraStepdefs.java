@@ -6,12 +6,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 
-
 public class ArriesgarLetraStepdefs {	
 	
 	Ahorcado ahorcado;
-	
-	
+		
 	@Given("^la palabra secreta es \"(.*?)\"$")
 	public void la_palabra_secreta_es(String palabra) throws Throwable {
 	    ahorcado = new Ahorcado(palabra);
@@ -25,7 +23,7 @@ public class ArriesgarLetraStepdefs {
 	}
 	
 	@When("^arriesgo una \"(.*?)\"$")
-	public void arriesgo_una(String letra) throws Throwable {
+	public void arriesgo_una_letra(String letra) throws Throwable {
 		ahorcado.arrriesgarLetra(letra);
 	}
 
@@ -39,8 +37,5 @@ public class ArriesgarLetraStepdefs {
 	public void el_resultado_del_juego_es(String resultado) throws Throwable {
 		 Assert.assertEquals(resultado, ahorcado.getResultadoJuego());
 	}
-	
-	
 
-	
 }

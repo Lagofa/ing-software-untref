@@ -29,3 +29,9 @@ Scenario: Arriesgo una letra teniendo una sola vida y no acierto
 Given la palabra secreta es "manzana" And el estado de la palabra es "*a**a*a" And tengo 1 vidas 
 When arriesgo una "k"
 Then el resultado del juego es "Perdiste"
+
+Scenario: Arriesgo una letra y gano el juego
+Given la palabra secreta es "auto" And el estado de la palabra es "au*o" And tengo 4 vidas 
+When arriesgo una "t"
+Then el resultado del juego es "Ganaste"
+
