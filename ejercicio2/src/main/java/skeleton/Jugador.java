@@ -12,4 +12,9 @@ public class Jugador {
 		return this.vidas;
 	}
 
+	public void decrementarVida() {
+		this.vidas--;
+		
+	}
+
 }
