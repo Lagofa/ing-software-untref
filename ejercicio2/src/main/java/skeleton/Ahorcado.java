@@ -1,5 +1,7 @@
 package skeleton;
 
+import java.util.Arrays;
+
 public class Ahorcado {
 	
 	private Jugador jugador;
@@ -37,6 +39,16 @@ public class Ahorcado {
 	
 	public void setEstadoPalabra(String estadoPalabra){
 		this.palabra.setEstadoPalabra(estadoPalabra);
+	}
+	
+	public String getResultadoJuego(){
+		String resultadoJuego = null ;
+		if(this.getVidasJugador() > 0 && Arrays.equals(this.palabra.getPalabra(),this.palabra.getEstadoPalabra())){
+			resultadoJuego = "Ganaste";
+		}else if(this.getVidasJugador() == 0 && !Arrays.equals(this.palabra.getPalabra(),this.palabra.getEstadoPalabra())){
+				  resultadoJuego = "Perdiste";
+		}
+		return resultadoJuego;		
 	}
 	
 }

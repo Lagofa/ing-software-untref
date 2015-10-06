@@ -35,4 +35,12 @@ public class ArriesgarLetraStepdefs {
 	    Assert.assertEquals(ahorcado.getVidasJugador(), vidasJugador);
 	}  
 	
+	@Then("^el resultado del juego es \"(.*?)\"$")
+	public void el_resultado_del_juego_es(String resultado) throws Throwable {
+		 Assert.assertEquals(resultado, ahorcado.getResultadoJuego());
+	}
+	
+	
+
+	
 }
