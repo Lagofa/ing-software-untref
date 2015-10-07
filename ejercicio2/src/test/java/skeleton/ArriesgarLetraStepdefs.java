@@ -1,7 +1,6 @@
 package skeleton;
 
 import org.junit.Assert;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
@@ -24,7 +23,7 @@ public class ArriesgarLetraStepdefs {
 	
 	@When("^arriesgo una \"(.*?)\"$")
 	public void arriesgo_una_letra(String letra) throws Throwable {
-		ahorcado.arrriesgarLetra(letra);
+            ahorcado.arrriesgarLetra(letra);
 	}
 
 	@Then("^el estado de la palabra es \"(.*?)\" And me quedan (\\d+) vidas$")
@@ -35,7 +34,7 @@ public class ArriesgarLetraStepdefs {
 	
 	@Then("^el resultado del juego es \"(.*?)\"$")
 	public void el_resultado_del_juego_es(String resultado) throws Throwable {
-		 Assert.assertEquals(resultado, ahorcado.getResultadoJuego());
+	    Assert.assertEquals(resultado, ahorcado.getResultadoJuego());
 	}
 
 }
