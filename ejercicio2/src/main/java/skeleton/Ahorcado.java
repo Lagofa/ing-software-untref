@@ -46,7 +46,7 @@ public class Ahorcado {
 		if(this.getVidasJugador() > 0 && Arrays.equals(this.palabra.getPalabra(),this.palabra.getEstadoPalabra())){
 			resultadoJuego = "Ganaste";
 		}else if(this.getVidasJugador() == 0 && !Arrays.equals(this.palabra.getPalabra(),this.palabra.getEstadoPalabra())){
-				  resultadoJuego = "Perdiste";
+		              resultadoJuego = "Perdiste";
 		}
 		return resultadoJuego;		
 	}
