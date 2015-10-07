@@ -1,4 +1,4 @@
-Feature: arriesgarLetra
+Feature: Arriesgar Letra
 
 Scenario: Arriesgo una letra minuscula al comenzar el juego y acierto
 Given la palabra secreta es "auto" 
