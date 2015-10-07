@@ -7,12 +7,10 @@ import cucumber.api.java.en.Then;
 
 public class Stepdefspiedra_papel_tijera {
 	  
-	private Juego juego;
-	private Jugador jugador1 = new Jugador(1);
-	private Jugador jugador2 = new Jugador(2);
-    
-	
-	
+    private Juego juego;
+    private Jugador jugador1 = new Jugador(1);
+    private Jugador jugador2 = new Jugador(2);
+   
     @Given("^jugador1 juega PIEDRA$")
     public void primer_jugador_juega_PIEDRA() throws Throwable {
             
