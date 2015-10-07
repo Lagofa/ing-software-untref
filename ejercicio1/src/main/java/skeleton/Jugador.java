@@ -5,9 +5,9 @@ public class Jugador {
 	private Opcion opcionElegida;
 	private int numeroDeJugador;
 	
-    public Jugador(int numeroDeJugador){
+        public Jugador(int numeroDeJugador){
 		
-    	this.numeroDeJugador = numeroDeJugador;
+    		this.numeroDeJugador = numeroDeJugador;
 	
 	}
     
