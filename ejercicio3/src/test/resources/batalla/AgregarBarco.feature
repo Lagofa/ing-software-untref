@@ -9,3 +9,8 @@ Feature: Agregar Barco
     Given tengo un tablero de 10 x 10 And se tiene una lancha en la posicion 0 2 HORIZONTALMENTE
     When se agrega un destructor en posicion 0 2 HORIZONTALMENTE
     Then se obtiene "Posicion ocupada"
+
+  Scenario: Se intetnta ubicar un barco en una posición fuera del tablero
+    Given tengo un tablero de 10 x 10
+    When se agrega un destructor en posicion 0 8 HORIZONTALMENTE
+    Then se obtiene "Posicion invalida"
