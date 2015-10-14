@@ -70,6 +70,14 @@ public class TableroTest {
 		Assert.assertEquals("Hundido", this.tablero.disparar(3, 7));
 	}
 	
-	
+	@Test
+	public void tocarYHundirDestuctor() {
+		tablero = new Tablero(10, 10);
+		Destructor destructor = new Destructor();
+		this.tablero.agregarBarco(destructor, new Posicion(3, 6), new Vertical());
+		Assert.assertEquals("Tocado", this.tablero.disparar(3, 6));
+		Assert.assertEquals("Tocado", this.tablero.disparar(4, 6));
+		Assert.assertEquals("Hundido", this.tablero.disparar(5, 6));
+	}
 	
 }
