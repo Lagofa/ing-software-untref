@@ -3,6 +3,10 @@ package batalla;
 import org.junit.Assert;
 import org.junit.Test;
 
+import batalla.Barco;
+import batalla.Posicion;
+import batalla.Vertical;
+
 public class LanchaTest {
 
 	Barco[][] tablero = new Barco[10][10];
