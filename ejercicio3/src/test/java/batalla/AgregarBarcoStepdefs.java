@@ -25,4 +25,16 @@ public class AgregarBarcoStepdefs {
 		Assert.assertEquals(resultado, respuesta);
 	}
 
+	@Given("^tengo un tablero de (\\d+) x (\\d+) And se tiene una lancha en la posicion (\\d+) (\\d+) HORIZONTALMENTE$")
+	public void tengo_un_tablero_de_x_And_se_tiene_una_lancha_en_la_posicion_HORIZONTALMENTE(int filas, int columnas,
+			int fila, int columna) throws Throwable {
+		this.batalla.crearTablero(filas, columnas);
+		this.batalla.agregarBarco(new Lancha(), new Posicion(fila, columna), new Horizontal());
+	}
+
+	@When("^se agrega un destructor en posicion (\\d+) (\\d+) HORIZONTALMENTE$")
+	public void se_agrega_un_destructor_en_posicion_HORIZONTALMENTE(int fila, int columna) throws Throwable {
+		resultado = this.batalla.agregarBarco(new Destructor(), new Posicion(fila, columna), new Horizontal());
+	}
+
 }
