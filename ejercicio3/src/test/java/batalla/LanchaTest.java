@@ -8,7 +8,7 @@ public class LanchaTest {
 	Barco[][] tablero = new Barco[10][10];
 
 	@Test
-	public void agragarLanchaFueraDelTablero() {
+	public void agregarLanchaFueraDelTablero() {
 		inicializarTablero();
 		Lancha lancha = new Lancha();
 		Assert.assertEquals("Posicion invalida", lancha.agregarBarco(tablero, new Posicion(5, 10), new Vertical()));
