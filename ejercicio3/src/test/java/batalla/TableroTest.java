@@ -14,14 +14,14 @@ public class TableroTest {
 	Tablero tablero;
 
 	@Test
-	public void agregarLanchaConExito() {
+	public void agregarLanchaATablero() {
 		tablero = new Tablero(10, 10);
 		Lancha lancha = new Lancha();
 		Assert.assertEquals("Barco agregado", this.tablero.agregarBarco(lancha, new Posicion(3, 9), new Horizontal()));
 	}
 
 	@Test
-	public void agregarLanchaYAcorazado() {
+	public void agregarLanchaYAcorazadoATablero() {
 		tablero = new Tablero(10, 10);
 		Lancha lancha = new Lancha();
 		Acorazado acorazado = new Acorazado();
@@ -29,6 +29,20 @@ public class TableroTest {
 				this.tablero.agregarBarco(acorazado, new Posicion(3, 6), new Horizontal()));
 		Assert.assertEquals("Posicion invalida",
 				this.tablero.agregarBarco(lancha, new Posicion(3, 10), new Horizontal()));
+	}
+
+	@Test
+	public void agregarLanchaAcorazadoYDestructorATablero() {
+		tablero = new Tablero(10, 10);
+		Lancha lancha = new Lancha();
+		Acorazado acorazado = new Acorazado();
+		Destructor destructor = new Destructor();
+		Assert.assertEquals("Barco agregado",
+				this.tablero.agregarBarco(acorazado, new Posicion(3, 6), new Horizontal()));
+		Assert.assertEquals("Posicion invalida",
+				this.tablero.agregarBarco(lancha, new Posicion(3, 10), new Horizontal()));
+		Assert.assertEquals("Posicion ocupada",
+				this.tablero.agregarBarco(destructor, new Posicion(3, 4), new Horizontal()));
 	}
 
 }
