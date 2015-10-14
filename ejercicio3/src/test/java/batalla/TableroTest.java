@@ -52,4 +52,24 @@ public class TableroTest {
 		Assert.assertEquals("Agua", this.tablero.disparar(1, 1));
 	}
 	
+
+	@Test
+	public void hundirLancha() {
+		tablero = new Tablero(10, 10);
+		Lancha lancha = new Lancha();
+		this.tablero.agregarBarco(lancha, new Posicion(3, 9), new Horizontal());
+		Assert.assertEquals("Hundido", this.tablero.disparar(3, 9));
+	}
+	
+	@Test
+	public void tocarYHundirAcorazado() {
+		tablero = new Tablero(10, 10);
+		Acorazado acorazado = new Acorazado();
+		this.tablero.agregarBarco(acorazado, new Posicion(3, 6), new Horizontal());
+		Assert.assertEquals("Tocado", this.tablero.disparar(3, 6));
+		Assert.assertEquals("Hundido", this.tablero.disparar(3, 7));
+	}
+	
+	
+	
 }
