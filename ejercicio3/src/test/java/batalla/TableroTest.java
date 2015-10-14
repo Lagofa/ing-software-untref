@@ -20,4 +20,15 @@ public class TableroTest {
 		Assert.assertEquals("Barco agregado", this.tablero.agregarBarco(lancha, new Posicion(3, 9), new Horizontal()));
 	}
 
+	@Test
+	public void agregarLanchaYAcorazado() {
+		tablero = new Tablero(10, 10);
+		Lancha lancha = new Lancha();
+		Acorazado acorazado = new Acorazado();
+		Assert.assertEquals("Barco agregado",
+				this.tablero.agregarBarco(acorazado, new Posicion(3, 6), new Horizontal()));
+		Assert.assertEquals("Posicion invalida",
+				this.tablero.agregarBarco(lancha, new Posicion(3, 10), new Horizontal()));
+	}
+
 }
