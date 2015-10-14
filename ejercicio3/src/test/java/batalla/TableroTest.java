@@ -44,5 +44,12 @@ public class TableroTest {
 		Assert.assertEquals("Posicion ocupada",
 				this.tablero.agregarBarco(destructor, new Posicion(3, 4), new Horizontal()));
 	}
+	
 
+	@Test
+	public void dispararAPosicionVacia() {
+		tablero = new Tablero(10, 10);
+		Assert.assertEquals("Agua", this.tablero.disparar(1, 1));
+	}
+	
 }
