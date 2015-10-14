@@ -51,6 +51,22 @@ public class DestructorTest {
 				destructor.agregarBarco(this.tablero, new Posicion(4, 5), new Vertical()));
 	}
 
+	@Test
+	public void agregarDestructorHorizontalConExito() {
+		inicializarTablero();
+		Destructor destructor = new Destructor();
+		Assert.assertEquals("Barco agregado",
+				destructor.agregarBarco(this.tablero, new Posicion(1, 7), new Horizontal()));
+	}
+
+	@Test
+	public void agregarDestructorVerticalConExito() {
+		inicializarTablero();
+		Destructor destructor = new Destructor();
+		Assert.assertEquals("Barco agregado",
+				destructor.agregarBarco(this.tablero, new Posicion(7, 5), new Vertical()));
+	}
+
 	private void inicializarTablero() {
 		for (int i = 0; i < this.tablero.length; i++) {
 			for (int j = 0; j < this.tablero[0].length; j++) {
