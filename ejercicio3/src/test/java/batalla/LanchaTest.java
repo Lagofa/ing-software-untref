@@ -25,6 +25,13 @@ public class LanchaTest {
 		this.tablero[1][5]=lancha;
 		Assert.assertEquals("Posicion ocupada", lancha.agregarBarco(this.tablero,new Posicion(1, 5), new Vertical()));
 	}
+	
+	@Test
+	public void agregarLanchaConExito() {
+		inicializarTablero();
+		Lancha lancha = new Lancha();
+		Assert.assertEquals("Barco agregado", lancha.agregarBarco(this.tablero, new Posicion(1, 5), new Vertical()));
+	}
 
 	private void inicializarTablero() {
 		for (int i = 0; i < this.tablero.length; i++) {

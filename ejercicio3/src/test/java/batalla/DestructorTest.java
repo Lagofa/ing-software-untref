@@ -25,9 +25,10 @@ public class DestructorTest {
 	public void agregarVerticalDestructorFueraDelTablero() {
 		inicializarTablero();
 		Destructor destructor = new Destructor();
-		Assert.assertEquals("Posicion invalida", destructor.agregarBarco(this.tablero, new Posicion(8, 9), new Vertical()));
+		Assert.assertEquals("Posicion invalida",
+				destructor.agregarBarco(this.tablero, new Posicion(8, 9), new Vertical()));
 	}
-	
+
 	@Test
 	public void agregarDestructorBarcoEnPoscionOcupada() {
 		inicializarTablero();
@@ -35,7 +36,8 @@ public class DestructorTest {
 		this.tablero[2][5] = destructor;
 		this.tablero[3][5] = destructor;
 		this.tablero[4][5] = destructor;
-		Assert.assertEquals("Posicion ocupada", destructor.agregarBarco(this.tablero, new Posicion(4, 4), new Horizontal()));
+		Assert.assertEquals("Posicion ocupada",
+				destructor.agregarBarco(this.tablero, new Posicion(4, 4), new Horizontal()));
 	}
 
 	@Test
@@ -45,13 +47,14 @@ public class DestructorTest {
 		this.tablero[2][5] = destructor;
 		this.tablero[3][5] = destructor;
 		this.tablero[4][5] = destructor;
-		Assert.assertEquals("Posicion ocupada", destructor.agregarBarco(this.tablero, new Posicion(4, 5), new Vertical()));
+		Assert.assertEquals("Posicion ocupada",
+				destructor.agregarBarco(this.tablero, new Posicion(4, 5), new Vertical()));
 	}
 
 	private void inicializarTablero() {
-		for (int i = 0; i < tablero.length; i++) {
-			for (int j = 0; j < tablero[0].length; j++) {
-				tablero[i][j] = null;
+		for (int i = 0; i < this.tablero.length; i++) {
+			for (int j = 0; j < this.tablero[0].length; j++) {
+				this.tablero[i][j] = null;
 			}
 		}
 	}
