@@ -1,6 +1,7 @@
 package batalla;
 
 public class Tablero {
+
 	private Barco[][] tablero;
 
 	public Tablero(int filas, int columnas) {
