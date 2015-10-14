@@ -44,14 +44,12 @@ public class TableroTest {
 		Assert.assertEquals("Posicion ocupada",
 				this.tablero.agregarBarco(destructor, new Posicion(3, 4), new Horizontal()));
 	}
-	
 
 	@Test
 	public void dispararAPosicionVacia() {
 		tablero = new Tablero(10, 10);
 		Assert.assertEquals("Agua", this.tablero.disparar(1, 1));
 	}
-	
 
 	@Test
 	public void hundirLancha() {
@@ -60,7 +58,7 @@ public class TableroTest {
 		this.tablero.agregarBarco(lancha, new Posicion(3, 9), new Horizontal());
 		Assert.assertEquals("Hundido", this.tablero.disparar(3, 9));
 	}
-	
+
 	@Test
 	public void tocarYHundirAcorazado() {
 		tablero = new Tablero(10, 10);
@@ -69,7 +67,7 @@ public class TableroTest {
 		Assert.assertEquals("Tocado", this.tablero.disparar(3, 6));
 		Assert.assertEquals("Hundido", this.tablero.disparar(3, 7));
 	}
-	
+
 	@Test
 	public void tocarYHundirDestuctor() {
 		tablero = new Tablero(10, 10);
@@ -79,5 +77,5 @@ public class TableroTest {
 		Assert.assertEquals("Tocado", this.tablero.disparar(4, 6));
 		Assert.assertEquals("Hundido", this.tablero.disparar(5, 6));
 	}
-	
+
 }
