@@ -5,5 +5,8 @@ mvn test
 cd ..
 cd ejercicio2
 mvn test
+cd ..
+cd ejercicio3
+mvn test
 
 

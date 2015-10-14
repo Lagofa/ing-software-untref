@@ -2,7 +2,7 @@
 *.sublime-*
 .idea
 lib
-target
+*/target/*
 */.settings/* 
 *.classpath
 *.project
