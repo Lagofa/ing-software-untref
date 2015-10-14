@@ -64,6 +64,19 @@ public class AcorazadoTest {
 		Assert.assertEquals("Barco agregado", acorazado.agregarBarco(this.tablero, new Posicion(1, 5), new Vertical()));
 	}
 
+	@Test
+	public void acorazadoTocado() {
+		Acorazado acorazado = new Acorazado();
+		Assert.assertEquals("Tocado", acorazado.disparo());
+	}
+
+	@Test
+	public void acorazadoHundido() {
+		Acorazado acorazado = new Acorazado();
+		acorazado.disparo();
+		Assert.assertEquals("Hundido", acorazado.disparo());
+	}
+
 	private void inicializarTablero() {
 		for (int i = 0; i < this.tablero.length; i++) {
 			for (int j = 0; j < this.tablero[0].length; j++) {
