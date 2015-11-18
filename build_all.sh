@@ -8,5 +8,8 @@ mvn test
 cd ..
 cd ejercicio3
 mvn test
+cd ..
+cd ejercicio4
+mvn test
 
 
